@@ -1,0 +1,18 @@
+https://self-citation-detector-db-kartick-chandra-mondals-projects.vercel.app/
+
+
+
+
+psql "postgres://default:cwfPGpsroq82@ep-wispy-unit-a148b4ic.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require"
+
+
+
+
+POSTGRES_URL="postgres://default:cwfPGpsroq82@ep-wispy-unit-a148b4ic-pooler.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require"
+POSTGRES_PRISMA_URL="postgres://default:cwfPGpsroq82@ep-wispy-unit-a148b4ic-pooler.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require&pgbouncer=true&connect_timeout=15"
+POSTGRES_URL_NO_SSL="postgres://default:cwfPGpsroq82@ep-wispy-unit-a148b4ic-pooler.ap-southeast-1.aws.neon.tech:5432/verceldb"
+POSTGRES_URL_NON_POOLING="postgres://default:cwfPGpsroq82@ep-wispy-unit-a148b4ic.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require"
+POSTGRES_USER="default"
+POSTGRES_HOST="ep-wispy-unit-a148b4ic-pooler.ap-southeast-1.aws.neon.tech"
+POSTGRES_PASSWORD="cwfPGpsroq82"
+POSTGRES_DATABASE="verceldb"
