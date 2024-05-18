@@ -1,3 +1,8 @@
+https://self-citation-detector-db-kartick-chandra-mondals-projects.vercel.app/
+
+
+
+
 psql "postgres://default:cwfPGpsroq82@ep-wispy-unit-a148b4ic.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require"
 
 
