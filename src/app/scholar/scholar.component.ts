@@ -67,7 +67,7 @@ export class ScholarComponent {
         [Symbol.toStringTag]: ""
     }
 
-    public apiURL: string = 'https://final-year-project-backend-pi.vercel.app';
+    public apiURL: string = 'https://self-citation-detector-db-kartick-chandra-mondals-projects.vercel.app';
     public authorPersonal: any = {};
     public articleInfo: any = [];
     public articleDataList: Array<ArticleInfo> = [];
