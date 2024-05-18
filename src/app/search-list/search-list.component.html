@@ -1,0 +1,10 @@
+<section class="search-list">
+    <div class="search-list-container">
+        <div class="search-list-authors" *ngFor="let auth of authorList">
+            <button class="search-list-author-name" (click)="authorSearchById(auth.author_id)"><span>{{auth.name}}</span></button>
+            <p class="search-list-author-det"><b>Affiliations:</b> {{auth.affiliations}}</p>
+            <p class="search-list-author-det"><b>E-mail:</b> {{auth.email}}</p>
+            <p class="search-list-author-det"><b>Website:</b> {{auth.website}}</p>
+        </div>
+    </div>
+</section>

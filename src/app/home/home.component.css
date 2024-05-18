@@ -1,0 +1,59 @@
+.home-center {
+  display: block;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25rem;
+}
+
+.home-container-top {
+  margin-top: 40px;
+  text-align: center;
+  display: block;
+  /* border: 0.1px solid  red; */
+}
+
+.home-search-input {
+  height: 2rem;
+  width: 30rem;
+  border: 0.1px solid rgb(202, 202, 202);
+  border-right: none;
+  padding-left: 10px;
+  outline: none;
+  transition: outline-color 0.1s ease-out;
+}
+
+.home-search-input:focus {
+  outline: solid;
+  outline-width: 0.001px;
+  outline-color: #4d90fe;
+  border: none;
+}
+
+.home-search-button {
+  margin: 0;
+  height: 2.2rem;
+  background-color: #4d90fe;
+  border: none;
+  color: white;
+  width: 2.2rem;
+}
+
+.home-container-btm {
+  margin-top: 100px;
+  text-align: center;
+  display: block;
+  transition: ease 1s;
+}
+
+.home-doc-link {
+  font-family: sans-serif;
+  border: none;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  color: rgb(105, 105, 105);
+}
+
+.home-container-btm :hover {
+  color: #4d90fe;
+}

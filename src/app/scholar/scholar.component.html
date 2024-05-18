@@ -1,0 +1,97 @@
+<section class="scholar-container">
+    <div class="scholar-container-left">
+        <div class="scholar-details-top">
+            <div class="scholar-personal-left">
+                <img class="scholar-pic" src='{{authorPersonal.author_thumbnail}}'/>
+            </div>
+            <div class="scholar-personal-right">
+                <p class="scholar-name" >{{authorPersonal.author_name}}</p>
+                <p class="scholar-afl">{{authorPersonal.author_affiliations}}</p>
+                <p class="scholar-mail">{{authorPersonal.email}}</p>
+                <ul class="scholar-interests" type="none">
+                    <li *ngFor="let interest of authorPersonal.author_interests">{{interest}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="scholar-details-btm">
+            <table class="scholar-articles" matSort (matSortChange)="sortData($event)">
+                <tr class="scholar-article-hd" style="background-color: #2f7efd; color: white; ">
+                    <th style="width: 30%">TITLE</th>
+                    <th style="width: 12%; text-align: center;" mat-sort-header="totalCitations">TOTAL CITATIONS</th>
+                    <th style="width: 12%" mat-sort-header="selfCitations">SELF CITATIONS</th>
+                    <th style="width: 12%" mat-sort-header="otherCitations">OTHER CITATIONS</th>
+                    <th style="width: 9%" mat-sort-header="sor">SOR</th>
+                    <th style="width: 9%" mat-sort-header="sar">SAR</th>
+                    <th style="width: 9%; text-align: center;" mat-sort-header="oar">OAR</th>
+                </tr>
+                <tr class="scholar-article-det" *ngFor="let art of articleDataList; index as i;">
+                    <td class="title">{{art.title}}</td>
+                    <td style="text-align: center;" class="cited-by">{{art.totalCitations}}</td>
+                    <td style="text-align: center;" class="self-cited">{{art.selfCitations}}</td>
+                    <td style="text-align: center;" class="other-cited">{{art.otherCitations}}</td>
+                    <td style="text-align: center;" class="ratio">{{art.selfOtherRatio}}</td>
+                    <td style="text-align: center;" class="ratio">{{art.selfAllRatio}}</td>
+                    <td style="text-align: center;" class="ratio">{{art.otherAllRatio}}</td>
+                </tr>                
+            </table>
+        </div>
+    </div>
+    <div class="scholar-container-right">
+        <div class="scholar-det-table" style="padding: 15px 0px">
+            <table class="scholar-articles">
+                <tr class="scholar-article-hd" style="background-color: #2f7efd; color: white; ">
+                    <th style="width: 35%">INDEX</th>
+                    <th style="width: 20%">TOTAL CITATIONS</th>
+                    <th style="width: 20%">SELF CITATIONS</th>
+                    <th style="width: 20%">OTHER CITATIONS</th>
+                </tr>
+                <tr class="scholar-article-det">
+                    <td style="text-align: center; font-weight: 600;" class="title">Citations</td>
+                    <td style="text-align: center;" class="total-citation-count">{{countData[0]}}</td>
+                    <td style="text-align: center;" class="self-citation-count">{{countData[1]}}</td>
+                    <td style="text-align: center;" class="other-citation-count">{{countData[2]}}</td>
+                </tr>  
+                <tr class="scholar-article-det">
+                    <td style="text-align: center; font-weight: 600;" class="title">h-index</td>
+                    <td style="text-align: center;" class="total-citation-h-index">{{hData[0]}}</td>
+                    <td style="text-align: center;" class="self-citation-h-index">{{hData[1]}}</td>
+                    <td style="text-align: center;" class="other-citation-h-index">{{hData[2]}}</td>
+                </tr>  
+                <tr class="scholar-article-det">
+                    <td style="text-align: center; font-weight: 600;" class="title">i10-index</td>
+                    <td style="text-align: center;" class="total-citation-i10-index">{{i10Data[0]}}</td>
+                    <td style="text-align: center;" class="self-citation-i10-index">{{i10Data[1]}}</td>
+                    <td style="text-align: center;" class="other-citation-i10-index">{{i10Data[2]}}</td>
+                </tr>  
+            </table>
+        </div>
+        <div class="scholar-cred-table" style="padding: 15px 0px;">
+            <table class="scholar-articles" style="width: 100%">
+                <tr class="scholar-article-hd">
+                    <th style="width: 60%" style="background-color: #2f7efd; color: white; ">Self-Other Ratio of Author</th>
+                    <td style="width: 35%">{{authorScore[0]}}</td>
+                </tr>
+                <tr class="scholar-article-hd">
+                    <th style="width: 60%" style="background-color: #2f7efd; color: white; ">Self-All Ratio of Author</th>
+                    <td style="width: 35%">{{authorScore[1]}}</td>
+                </tr>
+                <tr class="scholar-article-hd">
+                    <th style="width: 60%" style="background-color: #2f7efd; color: white; ">Other-All Ratio of Author</th>
+                    <td style="width: 35%">{{authorScore[2]}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="scholar-coauthors" *ngIf="coauthors != undefined">
+            <p class="scholar-coauthors-hd">Co-Authors: </p>
+            <div class="coauthors-details" *ngFor="let ca of coauthors">
+                <div class="coauthor-personal-left">
+                    <img class="coauthor-pic" src='{{ca.thumbnail}}'/>
+                </div>
+                <div class="coauthor-personal-right">
+                    <p class="coathor-name" style="font-size: 1rem; font-weight: 600; margin: 0.5rem 0rem;">{{ca.name}}</p>
+                    <p class="coauthor-afl" style="font-size: 0.9rem; margin: 0rem;">{{ca.affiliations}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

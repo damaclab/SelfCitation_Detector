@@ -1,0 +1,72 @@
+.search-list-header {
+    background-color: rgba(204,204,204,.5);
+    margin: 0;
+    padding: 0.5rem;
+    padding-top: 0.75rem;
+    padding-left: 1rem;
+}
+
+.search-list-logo {
+    width: 20%;
+}
+
+.search-list-logo img {
+    height: 1.5rem;
+}
+
+.search-list-input {
+    width: 65%;
+    text-align: left;
+    vertical-align: top;
+}
+
+.search-list-input-space {
+    height: 1.5rem;
+    width: 80%;
+    border: 0.1px solid rgb(255, 255, 255);
+    border-right: none;
+    padding-left: 10px;
+    outline: none;
+    transition: outline-color 0.1s ease-out;
+    background-color: rgb(255, 255, 255);
+}
+
+.search-list-container {
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+.search-list-author-name {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    transition: ease-in-out 5s;
+    padding: 0;
+}
+
+.search-list-author-name span {
+    font-family: sans-serif;
+    color: #4d90fe;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.search-list-author-name :hover {
+    color: #4d91fec2;
+}
+
+.search-list-authors {
+    font-family: sans-serif;
+    border-top: 0.1px solid rgb(0, 0, 0, 0.2);
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+}
+
+.search-list-author-det {
+    margin: 5px 0px;
+}
+
+.search-list-container :nth-child(1) {
+    border-top: none;
+}
