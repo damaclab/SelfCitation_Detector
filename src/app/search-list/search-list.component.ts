@@ -27,7 +27,7 @@ export class SearchListComponent{
     apiEngine: string = 'google_scholar_profiles';
     commonUrl: string = '../../assets/mock-data/';
     // apiURL: string = "https://self-citation-detector-db-kartick-chandra-mondals-projects.vercel.app/authors";
-    apiURL: string = "https://final-year-project-backend-pi.vercel.app/authors";
+    apiURL: string = "https://self-citation-detector-db.vercel.app/authors";
     constructor(private location: Location, private http: HttpClient, private router: Router) {}
 
     private handleError(error: HttpErrorResponse) {
